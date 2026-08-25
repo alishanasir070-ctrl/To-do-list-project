@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Routine Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Welcome / Landing Screen -->
+  <div id="welcomeScreen" class="welcome-container">
+    <div class="welcome-header">
+      <button id="welcomeThemeToggleBtn" class="theme-btn">🌙 Dark Mode</button>
+    </div>
+    <h1>Welcome to Daily Routine Planner! 🚀</h1>
+    <p>Organize your daily tasks, set time limits, and get timely alarms to stay productive.</p>
+    <br>
+    <button id="startBtn">Get Started</button>
+  </div>
+
+  <!-- Main Planner Screen -->
+  <div id="appScreen" class="app-container hidden">
+    <div class="header">
+      <button id="backBtn" class="back-btn">⬅️ Back</button>
+      <h2>My To-Do List</h2>
+      <button id="themeToggleBtn" class="theme-btn">🌙 Dark Mode</button>
+    </div>
+
+    <!-- Counters Section -->
+    <div class="stats-card">
+      <div class="stat">
+        <h3 id="totalCount">0</h3>
+        <p>Total</p>
+      </div>
+      <div class="stat">
+        <h3 id="completedCount">0</h3>
+        <p>Completed</p>
+      </div>
+      <div class="stat">
+        <h3 id="remainingCount">0</h3>
+        <p>Remaining</p>
+      </div>
+    </div>
+    
+    <!-- Input Form -->
+    <div class="input-section">
+      <input type="text" id="taskInput" placeholder="Enter your task...">
+      <input type="time" id="taskTime">
+      <button id="addBtn">Add Task</button>
+    </div>
+
+    <!-- Task List -->
+    <ul id="taskList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

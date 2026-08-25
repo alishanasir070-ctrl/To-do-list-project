@@ -1,0 +1,271 @@
+:root {
+  --bg-color: #f4f9f5;        /* Soft Pale Green Background */
+  --card-bg: #ffffff;        /* Pure White Container */
+  --text-color: #2c3e35;      /* Dark Sage for readable text */
+  --primary-green: #4a7c59;  /* Classic Deep Sage for buttons & headers */
+  --light-green-bg: #e6f0e9; /* Light Pale Sage for task items & stats */
+  --border-color: #c8dcd0;   /* Delicate Pale Green border */
+}
+
+body.dark-mode {
+  --bg-color: #111a15;        /* Dark Forest Background */
+  --card-bg: #1a2720;        /* Dark Sage Card Background */
+  --text-color: #e6f0e9;      /* Light Pale Green Text */
+  --primary-green: #84b082;  /* Vibrant Soft Sage Accent */
+  --light-green-bg: #24352c; /* Muted Dark Pale Green for items */
+  --border-color: #334b3e;   /* Subtle Border */
+}
+
+/* Stat numbers and time badge highlights */
+.stat h3, .task-time-tag {
+  color: #5b8e6c !important; /* Mid-tone Sage Highlight */
+}
+
+body.dark-mode .stat h3, 
+body.dark-mode .task-time-tag {
+  color: #9ec59d !important; /* Soft Pale Sage Highlight */
+}
+
+.welcome-container h1, h2 {
+  color: var(--primary-green);
+}
+
+.welcome-container h1, h2 {
+  color: var(--primary-green);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.hidden { display: none !important; }
+
+/* Cards & Containers */
+.welcome-container, .app-container {
+  background: var(--card-bg);
+  width: 100%;
+  max-width: 480px;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.welcome-header, .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+h1, h2 {
+  color: var(--primary-green);
+  text-align: center;
+}
+
+/* Stats Counter Box */
+.stats-card {
+  background: var(--light-green-bg);
+  border: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.stat h3 {
+  font-size: 1.5rem;
+  color: var(--primary-green);
+}
+
+.stat p {
+  font-size: 0.85rem;
+  color: #74c69d;
+  font-weight: 600;
+}
+
+/* Input Controls */
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+input[type="text"], input[type="time"] {
+  padding: 12px 15px;
+  border: 1px solid var(--border-color);
+  background: var(--card-bg);
+  color: var(--text-color);
+  border-radius: 12px;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+input[type="text"] { flex: 2; }
+input[type="time"] { flex: 1; }
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+#addBtn, #startBtn {
+  background-color: var(--primary-green);
+  color: white;
+  padding: 12px 20px;
+}
+
+.theme-btn, .back-btn {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+/* List Items */
+ul { list-style: none; }
+
+li {
+  background: var(--light-green-bg);
+  border: 1px solid var(--border-color);
+  padding: 12px 15px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 14px;
+}
+
+li.completed .task-text {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.task-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-time-tag {
+  font-size: 0.8rem;
+  color: #52b788;
+  font-weight: 600;
+}
+
+.actions { display: flex; gap: 6px; }
+
+.actions button {
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.check-btn { background-color: #b7e4c7; color: #1b4332; }
+.edit-btn { background-color: #d8f3dc; color: #1b4332; }
+.delete-btn { background-color: #ffccd5; color: #a4133c; }
+/* ==========================================
+   MOBILE RESPONSIVE STYLES (Screens < 600px)
+   ========================================== */
+@media screen and (max-width: 600px) {
+  
+  /* Container layout adjustments */
+  body {
+    padding: 12px;
+  }
+
+  .welcome-container, .app-container {
+    padding: 20px 15px;
+    border-radius: 16px;
+    max-width: 100%;
+  }
+
+  /* Header scaling */
+  .header h2 {
+    font-size: 1.25rem;
+  }
+
+  .welcome-container h1 {
+    font-size: 1.4rem;
+  }
+
+  /* Stats Card stacking for small screens */
+  .stats-card {
+    padding: 10px 5px;
+  }
+
+  .stat h3 {
+    font-size: 1.2rem;
+  }
+
+  .stat p {
+    font-size: 0.75rem;
+  }
+
+  /* Input fields full width stack */
+  .input-section {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  input[type="text"], input[type="time"], #addBtn {
+    width: 100%;
+    font-size: 16px; /* Prevents iOS auto-zoom on input focus */
+  }
+
+  /* Task list action buttons optimization */
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .actions {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .actions button {
+    padding: 8px 14px;
+    font-size: 1rem; /* Easier to tap with thumbs */
+  }
+}
+/* Pinned Task Styling */
+li.pinned {
+  border: 2px solid #5b8e6c;
+  background-color: #d8ece0;
+}
+
+body.dark-mode li.pinned {
+  border: 2px solid #84b082;
+  background-color: #2c4236;
+}
+
+.pin-btn {
+  background-color: #fefae0;
+  color: #d4a373;
+}
+
+.pin-btn.active {
+  background-color: #ffb703;
+  color: #ffffff;
+}
