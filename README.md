@@ -28,3 +28,12 @@ routine-flow/
 ├── style.css         # Pale/Sage green theme, dark mode, & mobile styles
 ├── script.js        # App logic, LocalStorage, alarms, and theme toggling
 └── README.md         # Project documentation and quick start guide
+
+## 👩‍💻 **Author**
+
+**Alisha**
+
+
+## ⭐ **Show Your Support**
+
+If you found **RoutineFlow** helpful or inspiring, give it a ⭐️ on GitHub! Your support helps keep the project growing.
