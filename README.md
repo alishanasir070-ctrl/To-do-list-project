@@ -18,3 +18,13 @@ RoutineFlow is a lightweight, mobile-responsive web application designed to help
 * **HTML5**: Semantic structure and accessible layouts.
 * **CSS3**: Custom CSS variables, CSS grid/flexbox, and media queries.
 * **JavaScript (ES6+)**: Local Storage API, Web Audio API, and Notification API.
+
+
+## 📁 Project Structure
+
+```text
+routine-flow/
+├── index.html        # Main HTML layout for Welcome and Planner screens
+├── style.css         # Pale/Sage green theme, dark mode, & mobile styles
+├── script.js        # App logic, LocalStorage, alarms, and theme toggling
+└── README.md         # Project documentation and quick start guide
